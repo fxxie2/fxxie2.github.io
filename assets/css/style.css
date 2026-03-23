@@ -338,6 +338,78 @@ section:nth-child(even) {
   color: var(--color-text);
 }
 
+/* ---------- Research Directions Tabs ---------- */
+.direction-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.direction-tab {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 20px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 100px;
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.direction-tab:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.direction-tab.active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+.direction-panel {
+  display: none;
+}
+
+.direction-panel.active {
+  display: block;
+}
+
+.direction-list {
+  list-style: none;
+}
+
+.direction-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.925rem;
+  line-height: 1.5;
+}
+
+.direction-list li:last-child {
+  border-bottom: none;
+}
+
+.direction-list li a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.direction-list li a:hover {
+  color: var(--color-accent);
+}
+
+.direction-list .venue-badge {
+  flex-shrink: 0;
+}
+
 /* ---------- Research Category Subheadings ---------- */
 .research-category {
   font-family: var(--font-serif);
@@ -1068,5 +1140,16 @@ footer p {
   .award-item {
     flex-direction: column;
     gap: 2px;
+  }
+
+  .direction-tab {
+    font-size: 0.82rem;
+    padding: 6px 14px;
+  }
+
+  .direction-list li {
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.875rem;
   }
 }

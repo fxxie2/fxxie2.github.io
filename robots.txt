@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fxxie2.github.io/fengze_xie/sitemap.xml
+Sitemap: https://fxxie2.github.io/sitemap.xml

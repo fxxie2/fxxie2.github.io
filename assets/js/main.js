@@ -36,6 +36,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- Research direction tabs ---
+  const dirTabs = document.querySelectorAll('.direction-tab');
+  const dirPanels = document.querySelectorAll('.direction-panel');
+  dirTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const dir = tab.dataset.direction;
+      dirTabs.forEach(t => t.classList.remove('active'));
+      dirPanels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.querySelector(`.direction-panel[data-direction="${dir}"]`).classList.add('active');
+    });
+  });
+
   // --- Active nav link on scroll (Step 16) ---
   const sections = document.querySelectorAll('section[id], header[id]');
   const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
@@ -98,6 +111,13 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: 'power3.out',
         scrollTrigger: { trigger: el, start: 'top 88%' }
       });
+    });
+
+    // Direction tabs: fade up
+    gsap.from('.direction-tabs', {
+      y: 20, opacity: 0, duration: 0.6,
+      ease: 'power3.out',
+      scrollTrigger: { trigger: '.direction-tabs', start: 'top 88%' }
     });
 
     // Project cards: staggered reveal
