@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fxxie2.github.io/fengze_xie.github.io/sitemap.xml
