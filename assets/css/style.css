@@ -302,6 +302,42 @@ section:nth-child(even) {
   background: rgba(0, 0, 0, 0.015);
 }
 
+/* ---------- News ---------- */
+.news-list {
+  list-style: none;
+}
+
+.news-list li {
+  display: flex;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.925rem;
+  line-height: 1.6;
+}
+
+.news-list li:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  flex-shrink: 0;
+  width: 80px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--color-highlight);
+  letter-spacing: 0.02em;
+  padding-top: 2px;
+}
+
+.news-text {
+  color: var(--color-text-muted);
+}
+
+.news-text strong {
+  color: var(--color-text);
+}
+
 /* ---------- Research Category Subheadings ---------- */
 .research-category {
   font-family: var(--font-serif);
@@ -330,6 +366,10 @@ section:nth-child(even) {
   overflow: hidden;
   margin-bottom: 32px;
   transition: all var(--transition);
+}
+
+.project-card.first-author {
+  border-left: 3px solid var(--color-highlight);
 }
 
 .project-card:hover {
@@ -870,8 +910,13 @@ section:nth-child(even) {
 .contact-message {
   font-size: 1.05rem;
   color: var(--color-text-muted);
-  margin-bottom: 32px;
+  margin-bottom: 0;
   line-height: 1.7;
+}
+
+.contact-message strong {
+  color: var(--color-highlight);
+  font-weight: 700;
 }
 
 .contact-links {
